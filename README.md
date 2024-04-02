@@ -38,7 +38,7 @@ mkdir -p /web/html/nginx-2420
 # -p is used create the directory even if path does not exist.
 
 # Now setup a separate server block "nginx-2420" for your new server.
-For using the sites-enabled and sites-available approach, create the following directories:
+# For using the sites-enabled and sites-available approach, create the following directories:
 ```bash
 mkdir /etc/nginx/sites-available
 mkdir /etc/nginx/sites-enabled
@@ -65,6 +65,7 @@ server {
 # instead of IP_address write your ip address
 
 # Now append include sites-enabled/*; to the end of the http block of the nginx.conf file.
+# This will make your html file work.
 ```bash
 sudo vim /etc/nginx/nginx.conf
 ```
@@ -81,6 +82,7 @@ sudo ln -s /etc/nginx/sites-available/nginx-2420.conf /etc/nginx/sites-enabled/
 ```
 
 # now for troubleshooting you can, do Configuration validation using 
+# you should get ok and successful if you did everything properly
 ```bash
 sudo nginx -t
 ```
