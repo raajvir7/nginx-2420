@@ -34,7 +34,7 @@ Description=Hello-Server-backend Service
 After=network.target
 
 [Service]
-ExecStart=/usr/local/bin/hello-server # location of your binary backend file
+ExecStart=/usr/bin/hello-server # location of your binary backend file
 Restart=always # this will automatically restart
 
 [Install]
